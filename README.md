@@ -37,6 +37,7 @@ While many models exist, there is a gap between **research prototypes** and **op
 
 ```r
 # install.packages("devtools")
+devtools::install_github("albers/prioritizedeforestationhotspots") # Necessary in this first package version
 devtools::install_github("LucasUfmg/pdm")
 ```
 
