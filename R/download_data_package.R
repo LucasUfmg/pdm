@@ -31,6 +31,7 @@ download_data <- function(folder_id,
     local_path <- file.path(root2, files_tabelas$name[i])
 
     if (!file.exists(local_path)) {
+      message("Skipping file already downloaded...")
       googledrive::drive_download(
         file = dplyr::slice(files_tabelas, i),
         path = local_path,
@@ -45,6 +46,7 @@ download_data <- function(folder_id,
     local_path <- file.path(root1, shp_files$name[i])
 
     if (!file.exists(local_path)) {
+      message("Skipping file already downloaded...")
       googledrive::drive_download(
         file = shp_files[i,],
         #file = dplyr::slice(shp_files, i),
