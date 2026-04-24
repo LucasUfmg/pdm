@@ -12,7 +12,7 @@ utils::globalVariables(c(
   "priority",
   "priority1",
   "has_deter",
-  "area_tot", "interaction_var","p"
+  "area_tot", "interaction_var","p", "UF", "MUNICIPALI"
 ))
 
 

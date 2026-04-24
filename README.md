@@ -79,8 +79,10 @@ The package follows a structured pipeline:
 ```r
 library(pdm)
 
-# Run model with default parameters for a given year
-result <- run_mdp_model(year = 2022)
+# Run model with default parameters for September 2022
+pdm::run_pipeline(folder = "your_folder_path",
+                  mes_inicial = 9,mes_final = 9, ano_inicial = 2022,
+                  run_download = T,run_prep = T,run_prio = T)
 
 # Outputs
 names(result)

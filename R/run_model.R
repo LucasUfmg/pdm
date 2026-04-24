@@ -56,7 +56,7 @@ run_pipeline <- function(
 
     folder <- paths$shp_dir
 
-  }
+  } else {message("Skipping Downloading data...")}
 
   if (isTRUE(run_prep)) {
     message("Running def_prep...")
