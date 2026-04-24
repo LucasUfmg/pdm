@@ -51,6 +51,7 @@ download_data <- function(folder_id,
         overwrite = FALSE
       )
     }
+    Sys.sleep(1)
   }
 
   return(list(shp_dir = root1, tab_dir = root2))
