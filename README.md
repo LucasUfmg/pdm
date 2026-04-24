@@ -1,6 +1,6 @@
 # pdm
 
-**A reproducible framework for spatial prioritization of deforestation and fire risk using data-driven modeling in R**
+**A reproducible framework for monthly spatial prioritization of deforestation risk using data-driven modeling in R**
 
 ---
 
