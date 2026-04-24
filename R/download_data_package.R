@@ -46,7 +46,8 @@ download_data <- function(folder_id,
 
     if (!file.exists(local_path)) {
       googledrive::drive_download(
-        file = dplyr::slice(shp_files, i),
+        file = shp_files[i,],
+        #file = dplyr::slice(shp_files, i),
         path = local_path,
         overwrite = FALSE
       )
