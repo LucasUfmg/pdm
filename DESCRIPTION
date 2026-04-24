@@ -20,3 +20,5 @@ Imports:
     stats,
     tidyr,
     utils
+URL: https://github.com/LucasUfmg/pdm
+BugReports: https://github.com/LucasUfmg/pdm/issues
