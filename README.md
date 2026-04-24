@@ -6,7 +6,7 @@
 
 ## Overview
 
-`pdm` is an R package designed to support **environmental decision-making** by identifying and prioritizing areas at risk of **deforestation and fire occurrence**.
+`pdm` is an R package designed to support **environmental decision-making** by identifying and prioritizing areas at risk of **deforestation**.
 
 The package operationalizes a modeling pipeline that:
 
