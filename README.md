@@ -79,7 +79,7 @@ The package follows a structured pipeline:
 
 ```r
 library(pdm)
-
+library(prioritizedeforestationhotspots)
 # Run model with default parameters for September 2022
 pdm::run_pipeline(folder = "your_folder_path",
                   mes_inicial = 9,mes_final = 9, ano_inicial = 2022,
