@@ -25,6 +25,22 @@ download_data <- function(folder_id,
   dir.create(root1, recursive = TRUE, showWarnings = FALSE)
   dir.create(root2, recursive = TRUE, showWarnings = FALSE)
 
+  # download shapefiles
+  for (i in seq_len(nrow(shp_files))) {
+    local_path <- file.path(root1, shp_files$name[i])
+
+    if (!file.exists(local_path)) {
+      message("Skipping file already downloaded...")
+      googledrive::drive_download(
+        file = shp_files[i,],
+        #file = dplyr::slice(shp_files, i),
+        path = local_path,
+        overwrite = FALSE
+      )
+    }
+    Sys.sleep(5)
+  }
+
   # download tables
   #download_and_unzip(folder_id_tabelas,root2)
   for (i in seq_len(nrow(files_tabelas))) {
@@ -41,21 +57,7 @@ download_data <- function(folder_id,
       Sys.sleep(1)
     }
   }
-  # download shapefiles
-  for (i in seq_len(nrow(shp_files))) {
-    local_path <- file.path(root1, shp_files$name[i])
 
-    if (!file.exists(local_path)) {
-      message("Skipping file already downloaded...")
-      googledrive::drive_download(
-        file = shp_files[i,],
-        #file = dplyr::slice(shp_files, i),
-        path = local_path,
-        overwrite = FALSE
-      )
-    }
-    Sys.sleep(1)
-  }
 
   return(list(shp_dir = root1, tab_dir = root2))
 }
