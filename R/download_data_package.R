@@ -38,7 +38,7 @@ download_data <- function(folder_id,
         overwrite = FALSE
       )
     }
-    Sys.sleep(5)
+    Sys.sleep(1)
   }
 
   # download tables
