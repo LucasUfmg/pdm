@@ -1,6 +1,6 @@
 # pdm
 
-**A reproducible framework for spatial prioritization of deforestation and fire risk using data-driven modeling in R**
+**A reproducible framework for monthly spatial prioritization of deforestation risk using data-driven modeling in R**
 
 ---
 
@@ -37,6 +37,7 @@ While many models exist, there is a gap between **research prototypes** and **op
 
 ```r
 # install.packages("devtools")
+devtools::install_github("albhasan/prioritizedeforestationhotspots")# Necessary in this first package version
 devtools::install_github("LucasUfmg/pdm")
 ```
 
@@ -78,7 +79,7 @@ The package follows a structured pipeline:
 
 ```r
 library(pdm)
-
+library(prioritizedeforestationhotspots)
 # Run model with default parameters for September 2022
 pdm::run_pipeline(folder = "your_folder_path",
                   mes_inicial = 9,mes_final = 9, ano_inicial = 2022,
